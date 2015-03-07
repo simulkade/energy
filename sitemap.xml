@@ -5,7 +5,15 @@
     xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
+  <loc>http://energy.simulkade.com/2015/index.html</loc>
+  <lastmod>2015-03-07</lastmod>
+ </url>
+ <url>
   <loc>http://energy.simulkade.com/archive.html</loc>
+  <lastmod>2015-03-07</lastmod>
+ </url>
+ <url>
+  <loc>http://energy.simulkade.com/categories/general.html</loc>
   <lastmod>2015-03-07</lastmod>
  </url>
  <url>
@@ -22,6 +30,10 @@
  </url>
  <url>
   <loc>http://energy.simulkade.com/listings/index.html</loc>
+  <lastmod>2015-03-07</lastmod>
+ </url>
+ <url>
+  <loc>http://energy.simulkade.com/posts/writing-here-is-not-for-fun.html</loc>
   <lastmod>2015-03-07</lastmod>
  </url>
 </urlset>
