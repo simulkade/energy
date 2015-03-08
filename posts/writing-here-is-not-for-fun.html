@@ -17,6 +17,19 @@ article: http://ogp.me/ns/article#
 
 
     
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+    },
+    displayAlign: 'center', // Change this to 'center' to center equations.
+    "HTML-CSS": {
+        styles: {'.MathJax_Display': {"margin": 0}}
+    }
+});
+</script>
+
         <!--[if lt IE 9]><script src="/assets/js/html5.js"></script><![endif]-->
 
     
@@ -29,6 +42,7 @@ article: http://ogp.me/ns/article#
     <meta property="og:description" content="Here, I'm going to write about conversion of energy. There will be some equations and computations, which is the main reason I've chosen to blog with ipython (or Jupyter) notebook. I'll use Python and">
     <meta property="og:type" content="article">
     <meta property="article:published_time" content="2015-03-07T21:24:24+01:00">
+           <meta property="article:tag" content="General">
 
     
     
@@ -60,7 +74,13 @@ article: http://ogp.me/ns/article#
         <a href="writing-here-is-not-for-fun.ipynb" id="sourcelink">Source</a>
 
             </div>
-            
+                    <div itemprop="keywords" class="tags">
+        <ul>
+        Tags : 
+           <li><a class="tag p-category" href="../categories/general.html" rel="tag">General</a></li>
+        </ul>
+        </div>
+
         </div>
         <div class="body">
             <div tabindex="-1" id="notebook" class="border-box-sizing">
@@ -123,7 +143,25 @@ article: http://ogp.me/ns/article#
 
         </div>
         
-                    
+                            <div id="disqus_thread"></div>
+        <script>
+        var disqus_shortname ="exergyblog",
+            disqus_url="http://energy.simulkade.com/posts/writing-here-is-not-for-fun.html",
+        disqus_title="Writing here is not for fun",
+        disqus_identifier="cache/posts/writing-here-is-not-for-fun.html",
+        disqus_config = function () {
+            this.language = "en";
+        };
+        (function() {
+            var dsq = document.createElement('script'); dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
+</noscript>
+    <a href="//disqus.com" class="dsq-brlink" rel="nofollow">Comments powered by <span class="logo-disqus">Disqus</span></a>
+
 
     </div>
                     <footer id="footer" role="contentinfo">
