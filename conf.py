@@ -119,16 +119,35 @@ TRANSLATIONS_PATTERN = "{path}.{lang}.{ext}"
 #          with a ``/``, otherwise end them with ``/index.html`` — or
 #          else they won’t be highlighted when active.
 
+# For zen-ipython theme
 NAVIGATION_LINKS = {
-    DEFAULT_LANG: (
-        ("/archive.html", "Archive"),
-        ("/categories/index.html", "Tags"),
-        ("/rss.xml", "RSS feed"),
-    ),
-}
+        DEFAULT_LANG: (
+            ('/index.html', 'Home', 'icon-home'),
+            ('/archive.html', 'Archives', 'icon-folder-open-alt'),
+            ('/categories/index.html', 'Tags', 'icon-tags'),
+            ('/rss.xml', 'RSS', 'icon-rss'),
+            ('http://simulkade.com/about/', 'About me', 'icon-user'),
+            ('https://twitter.com/aidadaddy', 'My Twitter', 'icon-twitter'),
+            ('https://github.com/simulkade', 'My Github', 'icon-github'),
+        )
+    }
+
+# For ipython theme
+#NAVIGATION_LINKS = {
+#        DEFAULT_LANG: (
+#            ('/index.html', 'Home'),
+#            ('/archive.html', 'Archives'),
+#            ('/categories/index.html', 'Tags'),
+#            ('/rss.xml', 'RSS'),
+#            ('http://simulkade.com/about/', 'About me'),
+#            ('https://twitter.com/aidadaddy', 'My Twitter'),
+#            ('https://github.com/simulkade', 'My Github'),
+#        )
+#    }
 
 # Name of the theme to use.
-THEME = "bootstrap3"
+# THEME = "bootstrap3"
+THEME="zen-ipython"
 
 # Below this point, everything is optional
 
@@ -635,7 +654,7 @@ COMMENT_SYSTEM = "disqus"
 # depends on what comment system you use. The default is
 # "nikolademo" which is a test account for Disqus. More information
 # is in the manual.
-COMMENT_SYSTEM_ID = ""
+COMMENT_SYSTEM_ID = "exergyblog"
 
 # Enable annotations using annotateit.org?
 # If set to False, you can still enable them for individual posts and pages
@@ -709,21 +728,20 @@ COMMENT_SYSTEM_ID = ""
 # MATHJAX_CONFIG = ""
 
 # If you are using the compile-ipynb plugin, just add this one:
-# MATHJAX_CONFIG = """
-# <script type="text/x-mathjax-config">
-# MathJax.Hub.Config({
-#     tex2jax: {
-#         inlineMath: [ ['$','$'], ["\\\(","\\\)"] ],
-#         displayMath: [ ['$$','$$'], ["\\\[","\\\]"] ],
-#         processEscapes: true
-#     },
-#     displayAlign: 'left', // Change this to 'center' to center equations.
-#     "HTML-CSS": {
-#         styles: {'.MathJax_Display': {"margin": 0}}
-#     }
-# });
-# </script>
-# """
+MATHJAX_CONFIG = """
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\\(","\\\)"] ],
+        displayMath: [ ['$$','$$'], ["\\\[","\\\]"] ],
+    },
+    displayAlign: 'center', // Change this to 'center' to center equations.
+    "HTML-CSS": {
+        styles: {'.MathJax_Display': {"margin": 0}}
+    }
+});
+</script>
+"""
 
 # Do you want to customize the nbconversion of your IPython notebook?
 # IPYNB_CONFIG = {}

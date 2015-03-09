@@ -1,111 +1,157 @@
 <!DOCTYPE html>
-<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# " lang="en">
+<html prefix="
+og: http://ogp.me/ns#
+article: http://ogp.me/ns/article#
+" lang="en">
     <head>
     <meta charset="utf-8">
     <meta name="description" content="My notes on conversion of energy">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width">
     <title>My energetic notes | My energetic notes</title>
 
-    
-            <link href="assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+                <link href="assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
 
-    
-            <link rel="alternate" type="application/rss+xml" title="RSS" href="rss.xml">
+                <link rel="alternate" type="application/rss+xml" title="RSS" href="rss.xml">
 
       <link rel="canonical" href="http://energy.simulkade.com/index.html">
 
 
 
+    
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+    },
+    displayAlign: 'center', // Change this to 'center' to center equations.
+    "HTML-CSS": {
+        styles: {'.MathJax_Display': {"margin": 0}}
+    }
+});
+</script>
+
+        <!--[if lt IE 9]><script src="/assets/js/html5.js"></script><![endif]-->
 
     
-        <!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]-->
 
     
-
-
-
+    <style>
+    div.input_prompt {
+      display: none;
+    }
+    </style>
 
 </head>
 <body>
-<a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+    <section class="social">
+        <ul>
+                    <li><a href="#" title="Home"><i class="icon-home"></i></a></li>
+            <li><a href="archive.html" title="Archives"><i class="icon-folder-open-alt"></i></a></li>
+            <li><a href="categories/index.html" title="Tags"><i class="icon-tags"></i></a></li>
+            <li><a href="rss.xml" title="RSS"><i class="icon-rss"></i></a></li>
+            <li><a href="http://simulkade.com/about/" title="About me"><i class="icon-user"></i></a></li>
+            <li><a href="https://twitter.com/aidadaddy" title="My Twitter"><i class="icon-twitter"></i></a></li>
+            <li><a href="https://github.com/simulkade" title="My Github"><i class="icon-github"></i></a></li>
 
-<!-- Menubar -->
+        </ul>
+    </section>
+    <section class="page-content">
+        <div class="content" rel="main">
+        <div class="post">
+            <h1 class="title"><a href="posts/writing-here-is-not-for-fun.html">Writing here is not for fun</a></h1>
+            <div class="meta">
+                <div class="authordate">
+                    <time class="timeago" datetime="2015-03-07T21:24:24+01:00">2015-03-07 21:24</time>
+                </div>
+                <div class="stats">
+                                <a href="posts/writing-here-is-not-for-fun.html#disqus_thread" data-disqus-identifier="cache/posts/writing-here-is-not-for-fun.html">Comments</a>
 
-<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-    <div class="container">
-<!-- This keeps the margins nice -->
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="http://energy.simulkade.com/">
 
-                <span id="blog-title">My energetic notes</span>
-            </a>
+                </div>
+                        <div itemprop="keywords" class="tags">
+        <ul>
+        Tags : 
+           <li><a class="tag p-category" href="categories/general.html" rel="tag">General</a></li>
+        </ul>
         </div>
-<!-- /.navbar-header -->
-        <div class="collapse navbar-collapse navbar-ex1-collapse">
-            <ul class="nav navbar-nav">
-                
-                <li>
-<a href="archive.html">Archive</a>
-                </li>
-<li>
-<a href="categories/index.html">Tags</a>
-                </li>
-<li>
-<a href="rss.xml">RSS feed</a>
 
-                
-            </li>
-</ul>
+            </div>
+            <div class="body">
+                <div tabindex="-1" id="notebook" class="border-box-sizing">
+    <div class="container" id="notebook-container">
 
-            <ul class="nav navbar-nav navbar-right">
-                
-                
-                    
-                
-            </ul>
-        </div>
-<!-- /.navbar-collapse -->
-    </div>
-<!-- /.container -->
-</nav>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Here, I'm going to write about conversion of energy. There will be some equations and computations, which is the main reason I've chosen to blog with ipython (or Jupyter) notebook. I'll use Python and Julia for the calculations. It can be as simple as energy requirement to pump a liquid, i.e., $$w=Q\Delta p$$ where $w$ [J/s] is work , $Q$ [m^3/s] is the volumetric flow rate, and $\Delta p$ [Pa] is the pressure difference. The calculation is done in Python as</p>
 
-<!-- End of Menubar -->
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [1]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-julia"><pre><span class="n">Q</span><span class="o">=</span> <span class="mf">1000.</span> <span class="c"># m^3/s</span>
+<span class="n">dp</span><span class="o">=</span> <span class="mf">10e5</span> <span class="c"># Pa</span>
+<span class="n">W</span><span class="o">=</span> <span class="n">Q</span><span class="o">*</span><span class="n">dp</span>
+</pre></div>
 
-<div class="container" id="content" role="main">
-    <div class="body-content">
-        <!--Body content-->
-        <div class="row">
-            
-            
-<div class="postindex">
+</div>
+</div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
 
 
-        
+<div class="output_area">
+<div class="prompt output_prompt">Out[1]:</div>
 
 
+<div class="output_text output_subarea output_execute_result">
+<pre>1.0e9</pre>
+</div>
 
+</div>
 
+</div>
+</div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>It was a very simple example. I'll be back with more.</p>
+
+</div>
+</div>
+</div>
+    </div>
+  </div>
+
+            </div>
         </div>
-        <!--End of body content-->
+    
+                   <script>var disqus_shortname="exergyblog";(function(){var a=document.createElement("script");a.async=true;a.src="//"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script>
 
-        <footer>
-            Contents © 2015         <a href="mailto:a.a.eftekhari@outlook.com">AAE</a> - Powered by         <a href="http://getnikola.com" rel="nofollow">Nikola</a>         
+
+                    <footer id="footer" role="contentinfo">
+            <p>Contents © 2015         <a href="mailto:a.a.eftekhari@outlook.com">AAE</a> - Powered by         <a href="http://getnikola.com" rel="nofollow">Nikola</a>         </p>
             
         </footer>
-    </div>
-</div>
 
-
-            <script src="assets/js/all-nocdn.js"></script>
+        </div>
+    </section>
+    
+    
+                <script src="assets/js/all-nocdn.js" type="text/javascript"></script>
     
 <!-- Social buttons -->
 <div id="addthisbox" class="addthis_toolbox addthis_peekaboo_style addthis_default_style addthis_label_style addthis_32x32_style">
@@ -129,15 +175,10 @@
 <!-- End of social buttons -->
 
 
-    <script>$('a.image-reference:not(.islink)').colorbox({rel:"gal",maxWidth:"100%",maxHeight:"100%",scalePhotos:true});</script>
-    <!-- fancy dates -->
-    <script>
-    moment.locale("");
-    fancydates(0, "YYYY-MM-DD HH:mm");
-    </script>
-    <!-- end fancy dates -->
-    
-
-
+        <script type="text/javascript">
+            $(function(){
+                $('.timeago').timeago();
+            });
+        </script>
 </body>
 </html>
