@@ -120,34 +120,32 @@ TRANSLATIONS_PATTERN = "{path}.{lang}.{ext}"
 #          else they won’t be highlighted when active.
 
 # For zen-ipython theme
-NAVIGATION_LINKS = {
-        DEFAULT_LANG: (
-            ('/index.html', 'Home', 'icon-home'),
-            ('/archive.html', 'Archives', 'icon-folder-open-alt'),
-            ('/categories/index.html', 'Tags', 'icon-tags'),
-            ('/rss.xml', 'RSS', 'icon-rss'),
-            ('http://simulkade.com/about/', 'About me', 'icon-user'),
-            ('https://twitter.com/aidadaddy', 'My Twitter', 'icon-twitter'),
-            ('https://github.com/simulkade', 'My Github', 'icon-github'),
-        )
-    }
-
-# For ipython theme
 #NAVIGATION_LINKS = {
 #        DEFAULT_LANG: (
-#            ('/index.html', 'Home'),
-#            ('/archive.html', 'Archives'),
-#            ('/categories/index.html', 'Tags'),
-#            ('/rss.xml', 'RSS'),
-#            ('http://simulkade.com/about/', 'About me'),
-#            ('https://twitter.com/aidadaddy', 'My Twitter'),
-#            ('https://github.com/simulkade', 'My Github'),
+#            ('/index.html', 'Home', 'icon-home'),
+#            ('/archive.html', 'Archives', 'icon-folder-open-alt'),
+#            ('/categories/index.html', 'Tags', 'icon-tags'),
+#            ('/rss.xml', 'RSS', 'icon-rss'),
+#            ('http://simulkade.com/about/', 'About me', 'icon-user'),
+#            ('https://twitter.com/aidadaddy', 'My Twitter', 'icon-twitter'),
+#            ('https://github.com/simulkade', 'My Github', 'icon-github'),
 #        )
 #    }
 
+# For ipython theme
+NAVIGATION_LINKS = {
+        DEFAULT_LANG: (
+            ("http://www.simulkade.com/stories/about.html", "About"),
+            ("http://www.simulkade.com", "Simulkade"),
+            ('/archive.html', 'Archives'),
+            ('/categories/index.html', 'Tags'),
+            ('/rss.xml', 'RSS'),
+        )
+    }
+
 # Name of the theme to use.
 # THEME = "bootstrap3"
-THEME="zen-ipython"
+THEME="ipython"
 
 # Below this point, everything is optional
 
@@ -221,11 +219,13 @@ TIMEZONE = "Europe/Amsterdam"
 POSTS = (
     ("posts/*.rst", "posts", "post.tmpl"),
     ("posts/*.txt", "posts", "post.tmpl"),
+    ("posts/*.md", "posts", "post.tmpl"),
     ("posts/*.ipynb", "posts", "post.tmpl"),
 )
 PAGES = (
     ("stories/*.rst", "stories", "story.tmpl"),
     ("stories/*.txt", "stories", "story.tmpl"),
+    ("stories/*.md", "stories", "story.tmpl"),
     ("stories/*.ipynb", "stories", "story.tmpl"),
 )
 
@@ -281,11 +281,11 @@ COMPILERS = {
 # Nikola supports logo display.  If you have one, you can put the URL here.
 # Final output is <img src="LOGO_URL" id="logo" alt="BLOG_TITLE">.
 # The URL may be relative to the site root.
-# LOGO_URL = ''
+LOGO_URL = ''
 
 # If you want to hide the title of your website (for example, if your logo
 # already contains the text), set this to False.
-# SHOW_BLOG_TITLE = True
+SHOW_BLOG_TITLE = True
 
 # Writes tag cloud data in form of tag_cloud_data.json.
 # Warning: this option will change its default value to False in v8!
@@ -582,7 +582,7 @@ GITHUB_REMOTE_NAME = 'origin'
 # }
 
 # Show only teasers in the index pages? Defaults to False.
-# INDEX_TEASERS = False
+INDEX_TEASERS = True
 
 # HTML fragments with the Read more... links.
 # The following tags exist and are replaced for you:
@@ -764,7 +764,7 @@ MathJax.Hub.Config({
 # Social buttons. This is sample code for AddThis (which was the default for a
 # long time). Insert anything you want here, or even make it empty.
 # (translatable)
-# SOCIAL_BUTTONS_CODE = """
+SOCIAL_BUTTONS_CODE = ""
 # <!-- Social buttons -->
 # <div id="addthisbox" class="addthis_toolbox addthis_peekaboo_style addthis_default_style addthis_label_style addthis_32x32_style">
 # <a class="addthis_button_more">Share</a>
@@ -780,7 +780,7 @@ MathJax.Hub.Config({
 
 # Show link to source for the posts?
 # Formerly known as HIDE_SOURCELINK (inverse)
-# SHOW_SOURCELINK = True
+SHOW_SOURCELINK = True
 # Copy the source files for your pages?
 # Setting it to False implies SHOW_SOURCELINK = False
 # COPY_SOURCES = True
@@ -799,7 +799,7 @@ MathJax.Hub.Config({
 # RSS_LINK = None
 
 # Show only teasers in the RSS feed? Default to True
-# RSS_TEASERS = True
+RSS_TEASERS = True
 
 # Strip HTML in the RSS feed? Default to False
 # RSS_PLAIN = False
