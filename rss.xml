@@ -1,5 +1,141 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>My energetic notes</title><link>http://energy.simulkade.com/</link><description>My notes on conversion of energy</description><atom:link href="http://energy.simulkade.com/rss.xml" type="application/rss+xml" rel="self"></atom:link><language>en</language><lastBuildDate>Mon, 28 Sep 2015 19:56:21 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Writing here is not for fun</title><link>http://energy.simulkade.com/posts/writing-here-is-not-for-fun.html</link><dc:creator>AAE</dc:creator><description>&lt;div tabindex="-1" id="notebook" class="border-box-sizing"&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>My Energetic Notes</title><link>http://energy.simulkade.com/</link><description>My notes on conversion of energy</description><atom:link rel="self" href="http://energy.simulkade.com/rss.xml" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Fri, 19 May 2017 10:53:59 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>A cup of tea with Mr. Joule</title><link>http://energy.simulkade.com/posts/a-cup-of-tea-with-mr-joule.html</link><dc:creator>AA Eftekhari</dc:creator><description>&lt;div tabindex="-1" id="notebook" class="border-box-sizing"&gt;
+    &lt;div class="container" id="notebook-container"&gt;
+
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;I'm fascinated with &lt;a href="https://en.wikipedia.org/wiki/Mechanical_equivalent_of_heat"&gt;Joule's experiment&lt;/a&gt;. Wikipedia says that it is not perhaps the first experiment demonstrating that heat and work are mutually interchangeable (see &lt;a href="https://en.wikipedia.org/wiki/Julius_von_Mayer"&gt;this page&lt;/a&gt; about Von Mayer), but nevertheless, the experiment is an excellent opening for thermodynamic lectures.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Joule%27s_Apparatus_%28Harper%27s_Scan%29.png" alt="Joule's experiment schematic wikipedia"&gt;&lt;/p&gt;
+&lt;p&gt;Mr. Joule put a mechanical mixer inside a bucket of water and isolated the whole system. Then he used the potential energy of a metal cylinder to rotate the mixer, which increases the temperature of water. He then apparently removed the isolation and let the system lose the gained heat and reach its original temperature. Then he asked himself (I guess):&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;I had potential energy in the metal cylinder, which I used to rotate the mixer. I converted the mechanical energy to heat, which I could measure as a higher temperature in the bucket of water. Later I removed the extra heat from the bucket by removing the isolation. In between, the bucket of water somehow stored that energy inside its belly. We can call it then the internal energy!&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Of course I'm making it up. But who cares!  I have learned from &lt;a href="http://heathbrothers.com/books/made-to-stick/"&gt;this amazing book&lt;/a&gt; that it is much better to keep the teaching material (profoundly) simple.&lt;/p&gt;
+&lt;p&gt;Usually I later ask students:&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;The metal cylinder is already fallen, and its potential energy is converted to heat and stored in the bucket of water. Assume there hasn't been any heat loss in the apparatus. Is it now possible to use that heat to move it back to its original position?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Last time, surprisingly, only a couple of students realized I'm talking about the second law of thermodynamics. So I decided to make this opening a bit more interesting, by doing some computations. Here's the problem: I want to have a cup of tea, but the only device that I have in my office is an ideal mixer similar to Mr. Joule's apparatus. My office is on the third floor and the only source of potential energy there is my own weight.&lt;/p&gt;
+&lt;p&gt;&lt;img src="http://energy.simulkade.com/joule_jump.png" alt="jumping for a cup of tea"&gt;&lt;/p&gt;
+&lt;p&gt;The question is, how many times do I need to jump to boil 1 liter of water? Let's list the assumptions:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;No energy loss in the apparatus (100% efficiency!)&lt;/li&gt;
+&lt;li&gt;Specific heat capacity of water is 4200 J/kg/K&lt;/li&gt;
+&lt;li&gt;Water is original at 20 degree Celsius&lt;/li&gt;
+&lt;li&gt;Density of water is 1.0 kg/liter&lt;/li&gt;
+&lt;li&gt;My weight is 80 kg (well 80+5 now that I only do mathematical modeling and programming)&lt;/li&gt;
+&lt;li&gt;Acceleration due to gravity is 9.8 m/s^2&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The problem can be formulated as follows: $$ n_{jump} m_{me} g \Delta z = m_{water}c_{p,water}(T-T_{init})$$&lt;/p&gt;
+&lt;p&gt;The number of jumps $n_jump$ then is calculated by: $$n_{jump} = \frac{m_{water}c_{p,water}(T-T_{init})}{m_{me} g \Delta z}$$&lt;/p&gt;
+&lt;p&gt;Let's do the calculation in the following Python cell:&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In [8]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;m_water&lt;/span&gt;  &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mf"&gt;1.0&lt;/span&gt;    &lt;span class="c1"&gt;# kg&lt;/span&gt;
+&lt;span class="n"&gt;cp_water&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mf"&gt;4200.&lt;/span&gt;  &lt;span class="c1"&gt;# J/kg/K&lt;/span&gt;
+&lt;span class="n"&gt;dZ&lt;/span&gt;       &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mf"&gt;10.&lt;/span&gt;    &lt;span class="c1"&gt;# m&lt;/span&gt;
+&lt;span class="n"&gt;g&lt;/span&gt;        &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mf"&gt;9.8&lt;/span&gt;    &lt;span class="c1"&gt;# m/s^2&lt;/span&gt;
+&lt;span class="n"&gt;m_me&lt;/span&gt;     &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;80&lt;/span&gt;     &lt;span class="c1"&gt;# kg&lt;/span&gt;
+&lt;span class="n"&gt;T_init&lt;/span&gt;   &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;20&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mf"&gt;273.15&lt;/span&gt;     &lt;span class="c1"&gt;# K&lt;/span&gt;
+&lt;span class="n"&gt;T_final&lt;/span&gt;  &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;100&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mf"&gt;273.15&lt;/span&gt;    &lt;span class="c1"&gt;# K&lt;/span&gt;
+
+&lt;span class="n"&gt;n_jump&lt;/span&gt;   &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;m_water&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;cp_water&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;T_final&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;T_init&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;m_me&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;g&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;dZ&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;n_jump&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="output_wrapper"&gt;
+&lt;div class="output"&gt;
+
+
+&lt;div class="output_area"&gt;
+&lt;div class="prompt"&gt;&lt;/div&gt;
+
+&lt;div class="output_subarea output_stream output_stdout output_text"&gt;
+&lt;pre&gt;42.857142857142854
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;The above simplified calculation tells me that I have to jump 43 times out of the window to make a cup of tea (well, technically 3 large cups of tea). In other words, I would have to jump 428 meters to provide enough heat to boil one liter of water.&lt;br&gt;
+Do not forget that the device that we use for making that cup of tea is 100% efficient.&lt;/p&gt;
+&lt;h3 id="Moving-back-to-the-office"&gt;Moving back to the office&lt;a class="anchor-link" href="http://energy.simulkade.com/posts/a-cup-of-tea-with-mr-joule.html#Moving-back-to-the-office"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Now, assume that on the last jump I hurt myself and now I cannot use the stairs anymore. Is the energy stored in 1 liter of boiling water enough to pull me to the office (not 43 times! only once)? In other words, is it possible to design a machine that extracts the heat (that was generated by jumping 43 times out of the window) and converts it to mechanical work to pull me back up? &lt;a href="https://en.wikipedia.org/wiki/Nicolas_L%C3%A9onard_Sadi_Carnot"&gt;Sadi Carnot&lt;/a&gt; (almost) answered this question at the beginning of the 19th century.
+Carnot asked himself a very interesting question: is it possible to convert all the heat generated from a the combustion of a fossil can be fully converted to mechanical work (i.e., movement) or there is a "natural limit" for this conversion? Asking this question at that time is a sign of genius, let alone answering it.&lt;br&gt;
+Carnot showed that there is indeed a natural limit for converting heat to the mechanical work. First of all, the heat needs to flow to a machine that converts it to work (here it is called a Carnot engine). This means that the machine must operate between a source at temperature $T_h$ to a sink at temperature $T_c$. From the amount of heat that flows from the heat source into the Carnot engine, only a certain fraction can be converted to mechanical work, that is calculated by $$\eta = 1-\frac{T_c}{T_h}.$$ 
+This is called the Carnot efficiency. For any real life engine, the efficiency is always lower than the Carnot efficiency.&lt;br&gt;
+Let's assume that I have a Carnot engine. The only source of energy I have is the heat that can be extracted from a one liter of boiling water. I use this heat source, convert it to mechanical work and use it to pull myself back up. How far does it take me? This is the formulation: $$ \Delta z = \frac {(1-\frac{T_{init}}{T})m_{water}c_{p,water}(T-T_{init})}{m_{me}g} $$&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In [11]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;dz&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;T_init&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;T_final&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;m_water&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;cp_water&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;T_final&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;T_init&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;m_me&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;g&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;dz&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="output_wrapper"&gt;
+&lt;div class="output"&gt;
+
+
+&lt;div class="output_area"&gt;
+&lt;div class="prompt"&gt;&lt;/div&gt;
+
+&lt;div class="output_subarea output_stream output_stdout output_text"&gt;
+&lt;pre&gt;91.8818552477939
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;This is indeed very interesting. It means that a Carnot engine would have easily taken me back upstairs. In fact there is enough energy to do the task 9 times.&lt;/p&gt;
+&lt;h3 id="What-does-the-difference-mean?"&gt;What does the difference mean?&lt;a class="anchor-link" href="http://energy.simulkade.com/posts/a-cup-of-tea-with-mr-joule.html#What-does-the-difference-mean?"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Let's recap: I jumped out of the window 43 times to boil water and the energy that was stored in the water could pull me back up only 9 times. In fact, we have lost something here. What we have lost is the quality of energy, by converting the (valuable) potential energy of my body weight to the low-quality heat stored in the boiling water. When Mr. Joule was encountered by this interpretation, he could not accept it (&lt;a href="https://en.wikipedia.org/wiki/James_Prescott_Joule"&gt;source&lt;/a&gt;):&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;I conceive that this theory ... is opposed to the recognised principles of philosophy because it leads to the conclusion that &lt;em&gt;vis viva&lt;/em&gt; (energy) may be destroyed by an improper disposition of the apparatus: Thus Mr Clapeyron draws the inference that 'the temperature of the fire being 1000°C to 2000°C higher than that of the boiler there is an enormous loss of vis viva in the passage of the heat from the furnace to the boiler.' Believing that the power to destroy belongs to the Creator alone I affirm ... that any theory which, when carried out, demands the annihilation of force, is necessarily erroneous.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;What we saw here is that the mechanical work can be converted to heat with 100% efficiency. But only a fraction of heat can be converted to mechanical energy (movement). That fraction can be calculated using the Carnot factor, and depends on the temperature of the heat source and the temperature of the environment. The amount of heat that is convertible to work is called &lt;em&gt;exergy&lt;/em&gt; and the rest that cannot be converted is called &lt;em&gt;anergy&lt;/em&gt;.&lt;br&gt;
+In our tea-making example, my potential energy could be fully converted to mechanical work (movement). But after converting it to heat by jumping down, only 9 of my 43 jumps survived as a source of energy that can be converted to work and the rest of the jumps lost their potential.&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+</description><guid>http://energy.simulkade.com/posts/a-cup-of-tea-with-mr-joule.html</guid><pubDate>Fri, 19 May 2017 06:49:24 GMT</pubDate></item><item><title>Writing here is not for fun</title><link>http://energy.simulkade.com/posts/writing-here-is-not-for-fun.html</link><dc:creator>AA Eftekhari</dc:creator><description>&lt;div tabindex="-1" id="notebook" class="border-box-sizing"&gt;
     &lt;div class="container" id="notebook-container"&gt;
 
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;
@@ -17,7 +153,7 @@
 &lt;div class="prompt input_prompt"&gt;In [1]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
     &lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-julia"&gt;&lt;pre&gt;&lt;span class="n"&gt;Q&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mf"&gt;1000.&lt;/span&gt; &lt;span class="c"&gt;# m^3/s&lt;/span&gt;
+&lt;div class=" highlight hl-julia"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;Q&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mf"&gt;1000.&lt;/span&gt; &lt;span class="c"&gt;# m^3/s&lt;/span&gt;
 &lt;span class="n"&gt;dp&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mf"&gt;10e5&lt;/span&gt; &lt;span class="c"&gt;# Pa&lt;/span&gt;
 &lt;span class="n"&gt;W&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Q&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;dp&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
@@ -30,7 +166,9 @@
 &lt;div class="output"&gt;
 
 
-&lt;div class="output_area"&gt;&lt;div class="prompt output_prompt"&gt;Out[1]:&lt;/div&gt;
+&lt;div class="output_area"&gt;
+&lt;div class="prompt output_prompt"&gt;Out[1]:&lt;/div&gt;
+
 
 
 &lt;div class="output_text output_subarea output_execute_result"&gt;

@@ -1,13 +1,11 @@
 <!DOCTYPE html>
-<html prefix="
-og: http://ogp.me/ns#
-article: http://ogp.me/ns/article#
-" lang="en">
+<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# " vocab="http://ogp.me/ns" lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Writing here is not for fun | My energetic notes</title>
-<link href="../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<meta name="viewport" content="width=device-width">
+<title>Writing here is not for fun | My Energetic Notes</title>
+<link href="../assets/css/all.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
 <link rel="alternate" type="application/rss+xml" title="RSS" href="../rss.xml">
 <link rel="canonical" href="http://energy.simulkade.com/posts/writing-here-is-not-for-fun.html">
 <script type="text/x-mathjax-config">
@@ -21,8 +19,9 @@ MathJax.Hub.Config({
         styles: {'.MathJax_Display': {"margin": 0}}
     }
 });
-</script><!--[if lt IE 9]><script src="../assets/js/html5.js"></script><![endif]--><meta name="author" content="AAE">
-<meta property="og:site_name" content="My energetic notes">
+</script><!--[if lt IE 9]><script src="../assets/js/html5.js"></script><![endif]--><meta name="author" content="AA Eftekhari">
+<link rel="next" href="a-cup-of-tea-with-mr-joule.html" title="A cup of tea with Mr. Joule" type="text/html">
+<meta property="og:site_name" content="My Energetic Notes">
 <meta property="og:title" content="Writing here is not for fun">
 <meta property="og:url" content="http://energy.simulkade.com/posts/writing-here-is-not-for-fun.html">
 <meta property="og:description" content="Here, I'm going to write about conversion of energy. There will be some equations and computations, which is the main reason I've chosen to blog with ipython (or Jupyter) notebook. I'll use Python and">
@@ -31,75 +30,56 @@ MathJax.Hub.Config({
 <meta property="article:tag" content="General">
 </head>
 <body>
-<a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
-
-<!-- Menubar -->
-
-<nav class="navbar navbar-inverse navbar-static-top"><div class="container">
-<!-- This keeps the margins nice -->
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="http://energy.simulkade.com/">
-
-                <span id="blog-title">My energetic notes</span>
-            </a>
-        </div>
-<!-- /.navbar-header -->
-        <div class="collapse navbar-collapse" id="bs-navbar" aria-expanded="false">
-            <ul class="nav navbar-nav">
-<li>
-<a href="http://www.simulkade.com/stories/about.html">About</a>
-                </li>
-<li>
-<a href="http://www.simulkade.com">Simulkade</a>
-                </li>
-<li>
-<a href="../archive.html">Archives</a>
-                </li>
-<li>
-<a href="../categories/index.html">Tags</a>
-                </li>
-<li>
-<a href="../rss.xml">RSS</a>
-
-                
-            </li>
-</ul>
-<ul class="nav navbar-nav navbar-right">
-<li>
-    <a href="writing-here-is-not-for-fun.ipynb" id="sourcelink">Source</a>
-    </li>
-                
-            </ul>
-</div>
-<!-- /.navbar-collapse -->
-    </div>
-<!-- /.container -->
-</nav><!-- End of Menubar --><div class="container" id="content" role="main">
-    <div class="body-content">
-        <!--Body content-->
-        <div class="row">
-            
-<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="#" class="u-url">Writing here is not for fun</a></h1>
-
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn">
-                    AAE
-            </span></p>
-            <p class="dateline"><a href="#" rel="bookmark"><time class="published dt-published" datetime="2015-03-07T21:24:24+01:00" itemprop="datePublished" title="2015-03-07 21:24">2015-03-07 21:24</time></a></p>
-                <p class="commentline">            <a href="writing-here-is-not-for-fun.html#disqus_thread" data-disqus-identifier="cache/posts/writing-here-is-not-for-fun.html">Comments</a>
-
-
-                    </p>
-<p class="sourceline"><a href="writing-here-is-not-for-fun.ipynb" id="sourcelink">Source</a></p>
-
+    <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+    <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+            styles, `#sidebar-checkbox` for behavior. -->
+    <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox"><!-- Toggleable sidebar --><div class="sidebar" id="sidebar">
+        <div class="sidebar-item">
+            <p>Theme by <a href="https://twitter.com/mdo" target="_blank">@mdo</a> and <a href="https://twitter.com/ralsina" target="_blank">@ralsina</a></p>
         </div>
         
+    <nav id="menu" role="navigation" class="sidebar-nav"><a class="sidebar-nav-item" href="http://www.simulkade.com/stories/about.html">About</a>
+        <a class="sidebar-nav-item" href="http://fvt.simulkade.com">FVT</a>
+        <a class="sidebar-nav-item" href="http://energy.simulkade.com">Energy</a>
+        <a class="sidebar-nav-item" href="http://pvt.simulkade.com">PVT</a>
+        <a class="sidebar-nav-item" href="http://persian.simulkade.com">فارسی</a>
+        <a class="sidebar-nav-item" href="../archive.html">Archive</a>
+        <a class="sidebar-nav-item" href="../categories/index.html">Tags</a>
+        <a class="sidebar-nav-item" href="../rss.xml">RSS feed</a>
+    
+    
+    </nav>
+</div>
+
+    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
+         content to avoid any CSS collisions with our real content. -->
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          
+    <h3 id="brand" class="masthead-title">
+      <a href="http://energy.simulkade.com/" title="My Energetic Notes" rel="home">My Energetic Notes</a>
+    </h3>
+
+        </div>
+      </div>
+
+      <div class="container content" id="content">
+        
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="post-title p-name entry-title" itemprop="headline name"><a href="#" class="u-url">Writing here is not for fun</a></h1>
+
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">AA Eftekhari</span></p>
+            <p class="dateline"><a href="#" rel="bookmark"><time class="post-date published dt-published" datetime="2015-03-07T21:24:24+01:00" itemprop="datePublished" title="2015-03-07 21:24">2015-03-07 21:24</time></a></p>
+                <p class="commentline">
+        
+    <a href="writing-here-is-not-for-fun.html#disqus_thread" data-disqus-identifier="cache/posts/writing-here-is-not-for-fun.html">Comments</a>
+
+
+        </p>
+</div>
+        
+
     </header><div class="e-content entry-content" itemprop="articleBody text">
     <div tabindex="-1" id="notebook" class="border-box-sizing">
     <div class="container" id="notebook-container">
@@ -119,7 +99,7 @@ MathJax.Hub.Config({
 <div class="prompt input_prompt">In [1]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-julia"><pre><span class="n">Q</span><span class="o">=</span> <span class="mf">1000.</span> <span class="c"># m^3/s</span>
+<div class=" highlight hl-julia"><pre><span></span><span class="n">Q</span><span class="o">=</span> <span class="mf">1000.</span> <span class="c"># m^3/s</span>
 <span class="n">dp</span><span class="o">=</span> <span class="mf">10e5</span> <span class="c"># Pa</span>
 <span class="n">W</span><span class="o">=</span> <span class="n">Q</span><span class="o">*</span><span class="n">dp</span>
 </pre></div>
@@ -134,6 +114,7 @@ MathJax.Hub.Config({
 
 <div class="output_area">
 <div class="prompt output_prompt">Out[1]:</div>
+
 
 
 <div class="output_text output_subarea output_execute_result">
@@ -162,8 +143,15 @@ MathJax.Hub.Config({
     </div>
     <aside class="postpromonav"><nav><ul itemprop="keywords" class="tags">
 <li><a class="tag p-category" href="../categories/general.html" rel="tag">General</a></li>
-        </ul></nav></aside><section class="comments"><h2>Comments</h2>
-                        <div id="disqus_thread"></div>
+        </ul>
+<ul class="pager hidden-print">
+<li class="next">
+                <a href="a-cup-of-tea-with-mr-joule.html" rel="next" title="A cup of tea with Mr. Joule">Next post</a>
+            </li>
+        </ul></nav></aside><section class="comments hidden-print"><h2>Comments</h2>
+        
+        
+        <div id="disqus_thread"></div>
         <script>
         var disqus_shortname ="exergyblog",
             disqus_url="http://energy.simulkade.com/posts/writing-here-is-not-for-fun.html",
@@ -174,27 +162,36 @@ MathJax.Hub.Config({
         };
         (function() {
             var dsq = document.createElement('script'); dsq.async = true;
-            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
             (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
         })();
-    </script><noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
+    </script><noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
 </noscript>
-    <a href="//disqus.com" class="dsq-brlink" rel="nofollow">Comments powered by <span class="logo-disqus">Disqus</span></a>
+    <a href="https://disqus.com" class="dsq-brlink" rel="nofollow">Comments powered by <span class="logo-disqus">Disqus</span></a>
 
 
-        </section></article><script>var disqus_shortname="exergyblog";(function(){var a=document.createElement("script");a.async=true;a.src="//"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script>
-</div>
-        <!--End of body content-->
-
-        <footer id="footer">
-            Contents © 2015         <a href="mailto:a.a.eftekhari@outlook.com">AAE</a> - Powered by         <a href="http://getnikola.com" rel="nofollow">Nikola</a>         
+        </section><script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"> </script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+    },
+    displayAlign: 'center', // Change this to 'center' to center equations.
+    "HTML-CSS": {
+        styles: {'.MathJax_Display': {"margin": 0}}
+    }
+});
+</script></article><script>var disqus_shortname="exergyblog";(function(){var a=document.createElement("script");a.async=true;a.src="https://"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script><footer id="footer"><p>Contents © 2017         <a href="mailto:a.a.eftekhari@outlook.com">AA Eftekhari</a> - Powered by         <a href="http://getnikola.com" rel="nofollow">Nikola</a>         </p>
             
         </footer>
 </div>
-</div>
-
-            <script src="../assets/js/all-nocdn.js"></script><script>$('a.image-reference:not(.islink) img:not(.islink)').parent().colorbox({rel:"gal",maxWidth:"100%",maxHeight:"100%",scalePhotos:true});</script><!-- fancy dates --><script>
-    moment.locale("");
+    </div>
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+    
+    
+    
+            <script src="../assets/js/all-nocdn.js"></script><!-- fancy dates --><script>
+    moment.locale("en");
     fancydates(0, "YYYY-MM-DD HH:mm");
     </script><!-- end fancy dates -->
 </body>

@@ -1,0 +1,4 @@
+Sitemap: http://energy.simulkade.com/sitemapindex.xml
+
+User-Agent: *
+Host: energy.simulkade.com
