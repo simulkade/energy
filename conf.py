@@ -17,8 +17,8 @@ import time
 
 
 # Data about this site
-BLOG_AUTHOR = "AAE"  # (translatable)
-BLOG_TITLE = "My energetic notes"  # (translatable)
+BLOG_AUTHOR = "AA Eftekhari"  # (translatable)
+BLOG_TITLE = "My Energetic Notes"  # (translatable)
 # This is the main URL for your site. It will be used
 # in a prominent link
 SITE_URL = "http://energy.simulkade.com/"
@@ -134,18 +134,21 @@ TRANSLATIONS_PATTERN = "{path}.{lang}.{ext}"
 
 # For ipython theme
 NAVIGATION_LINKS = {
-        DEFAULT_LANG: (
-            ("http://www.simulkade.com/stories/about.html", "About"),
-            ("http://www.simulkade.com", "Simulkade"),
-            ('/archive.html', 'Archives'),
-            ('/categories/index.html', 'Tags'),
-            ('/rss.xml', 'RSS'),
-        )
-    }
+     DEFAULT_LANG: (
+ 	("http://www.simulkade.com/stories/about.html", "About"),
+         ("http://fvt.simulkade.com", "FVT"),
+         ("http://energy.simulkade.com", "Energy"),
+         ("http://pvt.simulkade.com", "PVT"),
+         ("http://persian.simulkade.com", "فارسی"),
+         ("/archive.html", "Archive"),
+         ("/categories/index.html", "Tags"),
+         ("/rss.xml", "RSS feed"),
+     ),
+ }
 
 # Name of the theme to use.
 # THEME = "bootstrap3"
-THEME="ipython"
+THEME="lanyon"
 
 # Below this point, everything is optional
 
@@ -416,6 +419,7 @@ GITHUB_DEPLOY_BRANCH = 'gh-pages'
 
 # The name of the remote where you wish to push to, using github_deploy.
 GITHUB_REMOTE_NAME = 'origin'
+GITHUB_COMMIT_SOURCE = True
 
 # Where the output site should be located
 # If you don't use an absolute path, it will be considered as relative
